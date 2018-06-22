@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.zqy.service">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        //注册Service服务
+        <service android:name=".CommonService">
+        </service>
+
+        //注册Service服务
+        <service android:name=".CommunicableService">
+        </service>
+
+        //注册Service服务
+        <service android:name=".ForegroundService">
+        </service>
+
+        <service android:name=".MyIntentService">
+            <intent-filter >
+                <action android:name="com.zqy.service.intentService"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
